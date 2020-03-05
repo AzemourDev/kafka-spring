@@ -13,6 +13,7 @@ import java.util.Random;
 public class MyRestController {
     @Autowired
     private KafkaTemplate<String,PageEvent> kafkaTemplate;
+    private String dd;
 
     @GetMapping("/send/{page}/{topic}")
     public String send(@PathVariable String page, @PathVariable String topic){
